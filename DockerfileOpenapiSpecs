@@ -1,0 +1,8 @@
+FROM swaggerapi/swagger-ui:latest
+LABEL maintainer="Bruno Ripa <bruno.ripa@gmail.com>"
+
+ENV SWAGGER_JSON=/yaml/specs.yaml
+
+COPY ./app/priv/openapi/specs.yaml /yaml/specs.yaml
+
+EXPOSE 8080
